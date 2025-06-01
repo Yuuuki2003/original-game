@@ -3,9 +3,10 @@ import React from "react";
 type Props = {
     name: string;
     hp: number;
+    element: 'fire' | 'water' | 'grass';
 };
 
-const PlayerCard: React.FC<Props> = ({name,hp}) => {
+const PlayerCard: React.FC<Props> = ({name,hp,element}) => {
     const getHpColor = () => {
         if(hp>60) return '#4caf50';
         if(hp>30) return '#ff9800'
@@ -44,6 +45,7 @@ const PlayerCard: React.FC<Props> = ({name,hp}) => {
         {/*ダメージくらったときの動き*/}
 
         <p style={{ margin: 0 }}>HP: {hp}</p>
+        <p>属性: {element}</p>
     </div>
   );
 };

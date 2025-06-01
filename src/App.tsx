@@ -1,10 +1,20 @@
 import { useState} from "react";
 import PlayerCard from './components/PlayerCard';
 import type { Player } from "./types/Player";
+import { getElementMultiplier } from "./utils/battle";
+import { getWeaponByElement } from "./utils/weapons";
+
+
+const 
+
+
+
+
+
 
 function App(){
-  const [player, setPlayer] = useState<Player>({name:'勇者',hp:100});
-  const [enemy,setEnemy] = useState<Player>({name: '魔族',hp: 100});   
+  const [player, setPlayer] = useState<Player>({name:'勇者',hp:100, element:'fire'});
+  const [enemy,setEnemy] = useState<Player>({name: '魔族',hp: 100, element: 'water'});   
   //useStateに渡す初期値にはオブジェクトを入れることもできる
 
   const attackEnemy = () => {
@@ -32,6 +42,10 @@ function App(){
       backgroundColor: '#b3c6ff',
       color: 'yellow',
       minHeight: '100vh',
+      width: '100vw',              // ビューポート幅に合わせる
+      boxSizing: 'border-box',     // パディングも含めて調整
+      margin: 0,                   // 余計な余白を削除
+      overflowX: 'hidden'   
     }}>
     {/*JSX(JS内で書かれたHTMLっぽい部分)の中でのコメントはこれ*/}
     {/*htmlのフォントサイズは通常1rem(16px)*/}
@@ -55,8 +69,8 @@ function App(){
         {/*フレックスボックスは要素を横並びにする */}
         {/*gapは要素間の間隔*/}
 
-        <PlayerCard name={player.name} hp={player.hp} />
-        <PlayerCard name={enemy.name} hp={enemy.hp} />
+        <PlayerCard name={player.name} hp={player.hp} element={player.element} />
+        <PlayerCard name={enemy.name} hp={enemy.hp} element={enemy.element}/>
       </div>
         {/*PlayerCardにpropsを渡す*/}
 
