@@ -1,12 +1,14 @@
 import React from "react";
+import type { Weapon } from "../types/Player";
 
 type Props = {
     name: string;
     hp: number;
     element: 'fire' | 'water' | 'grass';
+    weapon:Weapon;
 };
 
-const PlayerCard: React.FC<Props> = ({name,hp,element}) => {
+const PlayerCard: React.FC<Props> = ({name,hp,element,weapon}) => {
     const getHpColor = () => {
         if(hp>60) return '#4caf50';
         if(hp>30) return '#ff9800'
@@ -46,6 +48,7 @@ const PlayerCard: React.FC<Props> = ({name,hp,element}) => {
 
         <p style={{ margin: 0 }}>HP: {hp}</p>
         <p>属性: {element}</p>
+        <p>武器: {weapon.name}</p>
     </div>
   );
 };
