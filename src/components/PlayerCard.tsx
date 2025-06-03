@@ -1,5 +1,5 @@
-import React from "react";
 import type { Weapon } from "../types/Player";
+
 
 type Props = {
     name: string;
