@@ -1,12 +1,9 @@
-import { useBattle } from './hooks/useBattle'; 
-import AppLayout from './components/AppLayout';
 import Title from './components/Title';
 import PlayerArea from './components/PlayerArea';
 import AttackButton from './components/AttackButton';
 
 function App() {
-  const { player, enemy, attackEnemy } = useBattle();
-
+  
   return (
     <AppLayout>
       <Title />

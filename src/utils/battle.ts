@@ -1,5 +1,4 @@
 //属性に応じたダメージ倍率を取得する
-
 import type { Player } from "../types/Player";
 
 export const getElementMultiplier = (attacker: Player,defender: Player):number =>{
