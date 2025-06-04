@@ -18,6 +18,7 @@ export const useBattle = () => {
     hp: 100,
     element: playerElement,
     weapon: getWeaponByElement(playerElement),
+    image: 'https://easyart.design/com/wp-content/uploads/2023/10/97def259a688a56b503688167abaaed3-1024x576.jpg'
   });
 
   const [enemy, setEnemy] = useState<Player>({
@@ -25,6 +26,7 @@ export const useBattle = () => {
     hp: 100,
     element: enemyElement,
     weapon: getWeaponByElement(enemyElement),
+    image: 'https://realdgame.jp/news/upload/%E3%82%BE%E3%83%BC%E3%83%9E_01.jpg'
   });
 
   const attackEnemy = () => {
