@@ -3,6 +3,7 @@ export type Player = {
     hp: number;
     element: 'fire' | 'water' | 'grass';
     weapon: Weapon;
+    image: string;
 };
 
 export type Weapon = {

@@ -14,22 +14,20 @@ const BattleField: React.FC<Props> = ({ player, enemy }) => {
       gap: '2rem',
       marginTop: '2rem',
     }}>
-    {/*JSX(JS内で書かれたHTMLっぽい部分)の中でのコメントはこれ*/}
-    {/*htmlのフォントサイズは通常1rem(16px)*/}
-    {/*ReactでのインラインCSSではJavaScriptのオブジェクトとして書くため、キャメルケース(	backgroundColorなど)になる*/}
-    {/*100vh(viewpoint height)は画面の高さの100%*/} 
 
       <PlayerCard 
         name={player.name} 
         hp={player.hp} 
         element={player.element} 
-        weapon={player.weapon} 
+        weapon={player.weapon}
+        image={player.image} 
       />
       <PlayerCard 
         name={enemy.name} 
         hp={enemy.hp} 
         element={enemy.element} 
         weapon={enemy.weapon} 
+        image={enemy.image}
       />
     </div>
   );

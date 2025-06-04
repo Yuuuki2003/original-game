@@ -5,7 +5,6 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => (
     padding: '2rem',
     fontFamily: 'sans-serif',
     backgroundColor: '#b3c6ff',
-    color: 'yellow',
     minHeight: '100vh',
     width: '100vw',
     boxSizing: 'border-box',

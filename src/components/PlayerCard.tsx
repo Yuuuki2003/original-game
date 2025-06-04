@@ -1,57 +1,65 @@
 import React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 import type { Weapon } from "../types/Player";
 
 type Props = {
-    name: string;
-    hp: number;
-    element: 'fire' | 'water' | 'grass';
-    weapon:Weapon;
+  name: string;
+  hp: number;
+  element: "fire" | "water" | "grass";
+  weapon: Weapon;
+  image: string;
 };
 
-const PlayerCard: React.FC<Props> = ({name,hp,element,weapon}) => {
-    const getHpColor = () => {
-        if(hp>60) return '#4caf50';
-        if(hp>30) return '#ff9800'
-        return '#f44336';
-    };
+const PlayerCard: React.FC<Props> = ({ name, hp, element, weapon,image }) => {
+  const getHpColor = () => {
+    if (hp > 60) return "#4caf50";
+    if (hp > 30) return "#ff9800";
+    return "#f44336";
+  };
 
-    return (
-        <div style={{
-            border: '2px solid #111',
-            borderRadius: '10px',
-            padding: '1rem',
-            width: '180px',
-            backgroundColor: '#fff', 
-            color: '#000',            
-            textAlign: 'center',
-        }}>
-    {/*枠全体の設定*/}
+  return (
+    <Card sx={{ width: 200, borderRadius: 2 }}>
+      <CardMedia
+        component="img"
+        height="140"
+        image={image}
+      /> 
+      <CardContent sx={{ textAlign: "center" }}>
+        <Typography variant="h6" fontWeight="bold" gutterBottom>
+          {name}
+        </Typography>
 
-        <h3 style={{ fontSize: '1.5rem', margin: '1rem' }}>{name}</h3>
-        <div style={{
-            backgroundColor: '#ddd',
-            borderRadius: '10px',
-            height: '15px',
-            overflow: 'hidden',
-            marginBottom: '0.5rem'
-        }}>
-        {/*HPゲージの見た目の設計*/}
-     
-            <div style={{
-                width: `${hp}%`,
-                backgroundColor: getHpColor(),
-                height: '100%',
-                transition: 'width 0.3s ease'
-            }} />
-        </div>
-        {/*ダメージくらったときの動き*/}
-
-        <p style={{ margin: 0 }}>HP: {hp}</p>
-        <p>属性: {element}</p>
-        <p>武器: {weapon.name}</p>
-    </div>
+        {/* HPゲージ */}
+        <Box
+          sx={{
+            backgroundColor: "#ddd",
+            borderRadius: 8,
+            height: 15,
+            overflow: "hidden",
+            mb: 1
+          }}
+        >
+          <Box
+            sx={{
+              width: `${hp}%`,
+              backgroundColor: getHpColor(),
+              height: "100%",
+              transition: "width 0.3s ease"
+            }}
+          />
+        </Box>
+        <Typography variant="body2" gutterBottom>
+          HP: {hp}
+        </Typography>
+        <Typography variant="body2">属性: {element}</Typography>
+        <Typography variant="body2">武器: {weapon.name}</Typography>
+      </CardContent>
+    </Card>
   );
 };
-
 
 export default PlayerCard;
