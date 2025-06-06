@@ -1,5 +1,5 @@
+import { Card, CardMedia, CardContent, Typography, Box } from "@mui/material";
 import type { Weapon } from "../types/Player";
-
 
 type Props = {
   name: string;

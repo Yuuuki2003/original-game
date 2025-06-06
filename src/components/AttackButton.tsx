@@ -27,3 +27,4 @@ const AttackButton = ({
   </div>
 );
 
+export default AttackButton;
