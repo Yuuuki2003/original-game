@@ -1,25 +1,33 @@
 # バトルゲーム
+- 攻撃ボタンを押すと、勇者と敵の双方に対してランダムなダメージが与えられます。
+- また、属性の相性に応じてダメージ倍率が変化する仕様を実装しています。
 
 ## 使用技術
-- React
-- TypeScript
-- Vite
-- HTML / CSS
-
-
+- フロントエンド: Vite + React + TypeScript
+- バックエンド: Node.js + Express + TypeScript
 ## 実行方法
 
-このプロジェクトをローカルで動作させるには、以下の手順で実行してください。
+---
+
+## 🔧 セットアップ手順
+
+### 1. リポジトリをクローン
 
 ```bash
-# リポジトリをクローン
-git clone https://github.com/Yuuuki2003/original-game.git
+git clone git@github.com:Yuuuki2003/original-game.git
 cd original-game
+```
+### 2. フロントエンドの起動
 
-# 依存パッケージのインストール
+```bash
+cd src
 npm install
-
-# 開発サーバーの起動
 npm run dev
+```
+### 3. バックエンドの起動
 
-
+```bash
+cd backend
+npm install
+npm run dev
+```
