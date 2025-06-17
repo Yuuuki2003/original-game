@@ -1,5 +1,6 @@
 import PlayerCard from './PlayerCard'; 
-import type { Player } from '../types/Player'; 
+import type { Player } from "../../shared/types/Player";
+
 
 type Props = {
   player: Player;
