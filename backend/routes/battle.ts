@@ -1,5 +1,5 @@
 import { Router } from "express";
-import type {Player} from "../../shared/types/Player"
+import type {Player} from "../../shared/types/Player";
 
 const router = Router();
 
