@@ -32,8 +32,13 @@ export const useBattle = () => {
 
   // 攻撃処理（バックエンドに依頼）
   const attackEnemy = async () => {
+    const API_BASE_URL =
+      import.meta.env.MODE === 'development'
+        ? '/api'
+        : '/api';
+
     try {
-      const response = await fetch("http://localhost:3001/api/attack", {
+      const response = await fetch(`${API_BASE_URL}/battle`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
