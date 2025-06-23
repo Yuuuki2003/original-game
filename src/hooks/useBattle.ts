@@ -17,7 +17,7 @@ export const useBattle = () => {
     hp: 100,
     element: playerElement,
     weapon: getWeaponByElement(playerElement),
-    image: 'https://easyart.design/com/wp-content/uploads/2023/10/97def259a688a56b503688167abaaed3-1024x576.jpg'
+    image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj7g0agTqNmdupJYisknrdc3WYdJysY0Q34JsTMzVc6Nsowz0bLujAuCZswTGIth0HQEWRa5H1Smq65RCjvR8eRVBF0g-zFjIovq1OKLNrMyPT_SMbEK-lrV06u9uStrIWPWdaaolQue8M/s450/yuusya_game.png'
   });
 
   // 敵初期化
@@ -27,7 +27,7 @@ export const useBattle = () => {
     hp: 100,
     element: enemyElement,
     weapon: getWeaponByElement(enemyElement),
-    image: 'https://realdgame.jp/news/upload/%E3%82%BE%E3%83%BC%E3%83%9E_01.jpg'
+    image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkDZFHXugOEho62wp3nY9zo3SYl3qdbYwT_xh0jtLvUcD47vynnptKtmYKzkJLY5i4NFSdKvwgvZTCF1dhPyM-JXAe6ASgprYgpXr6pUsaoM-YCmXIN6gCZxoWDQm9GBlyhTeNyjkqfkZq/s500/fantasy_maou_devil.png'
   });
 
   // 攻撃処理（バックエンドに依頼）
